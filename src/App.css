@@ -1,0 +1,183 @@
+.audio_player_source {
+  position: fixed;
+  /* top: 600px;
+  left: 100px; */
+}
+
+.audio_player_generated1 {
+  position: fixed;
+  /* top: 600px;
+  left: 1500px; */
+}
+
+.audio_player_generated2 {
+  position: fixed;
+  /* top: 600px;
+  left: 1500px; */
+}
+
+.pad1_2d_display_title {
+  position: fixed;
+}
+
+.pad2_2d_display_title {
+  position: fixed;
+}
+
+.text_input_pitch_count {
+  position: fixed;
+}
+.text_input_pitch_range {
+  position: fixed;
+}
+
+.text_input_avg_duration {
+  position: fixed;
+}
+
+.text_input_avg_velocity {
+  position: fixed;
+}
+
+.text_input_chroma {
+  position: fixed;
+}
+
+.text_input_chords {
+  position: fixed;
+}
+
+.text_output_pitch_count {
+  position: fixed;
+}
+.text_output_pitch_range {
+  position: fixed;
+}
+
+.text_output_avg_duration {
+  position: fixed;
+}
+
+.text_output_avg_velocity {
+  position: fixed;
+}
+
+.text_output_chroma {
+  position: fixed;
+}
+
+.text_output_chords {
+  position: fixed;
+}
+
+.input_pitch_count {
+  position: fixed;
+  /* top: 0px;
+  left: 500px; */
+}
+
+.input_pitch_range {
+  position: fixed;
+}
+
+.input_avg_duration {
+  position: fixed;
+}
+
+.input_avg_velocity {
+  position: fixed;
+}
+
+.input_chroma_metric {
+  position: fixed;
+}
+
+.input_chords_metric {
+  position: fixed;
+}
+
+.output_pitch_count {
+  position: fixed;
+  /* top: 0px;
+  left: 500px; */
+}
+
+.output_pitch_range {
+  position: fixed;
+}
+
+.output_avg_duration {
+  position: fixed;
+}
+
+.output_avg_velocity {
+  position: fixed;
+}
+
+.output_chroma_metric {
+  position: fixed;
+}
+
+.output_chords_metric {
+  position: fixed;
+}
+
+.text_title {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+  font-weight: bold;
+}
+
+.text_latent_values_label {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+  font-weight: bold;
+}
+
+.text_reference {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+}
+
+.text_signature {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+}
+
+.image_source_music {
+  position: fixed;
+  /* top: 370px;
+  left: -20px; */
+}
+
+.image_generated_music1 {
+  position: fixed;
+  /* top: 370px;
+  left: 1350px; */
+}
+
+.image_generated_music2 {
+  position: fixed;
+  /* top: 370px;
+  left: 1350px; */
+}
+
+.text_input {
+  position: fixed;
+  /* top: 200px;
+  left: 200px;
+  font: 32px Helvetica, Arial; */
+  font-weight: bold;
+}
+
+.text_output_variations {
+  position: fixed;
+  /* top: 200px;
+  left: 1500px;
+  font: 32px Helvetica, Arial; */
+  font-weight: bold;
+}
