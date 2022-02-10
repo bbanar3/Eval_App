@@ -67,6 +67,7 @@ var slider_6_num_of_bins = 33;
 var experiment_tag = 'MW2';
 
 
+
 // ******************************* Figure Toggles *********************************************************************
 
 
@@ -480,13 +481,13 @@ function TextOutputAudio(props) {
 
 function LineExperiments(props){
   return (
-    <Svg height = {800} width={1820}>
-      <Line x1={230 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={230 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
-      <Line x1={350 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={230 * props.current_width / original_page_width} y2={509 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
-      <Line x1={230 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
-      <Line x1={470 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
-      <Line x1={600 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
-      <Line x1={0 * props.current_width / original_page_width} y1={380 * props.current_height / original_page_height} x2={650 * props.current_width / original_page_width} y2={380 * props.current_height / original_page_height} stroke="grey" strokeWidth="3" />
+    <Svg height = {800 * props.current_height / original_page_height} width={1820 * props.current_width / original_page_width}>
+      <Line x1={230 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={230 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
+      <Line x1={350 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={230 * props.current_width / original_page_width} y2={509 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
+      <Line x1={230 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
+      <Line x1={470 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
+      <Line x1={600 * props.current_width / original_page_width} y1={475 * props.current_height / original_page_height} x2={470 * props.current_width / original_page_width} y2={510 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
+      <Line x1={0 * props.current_width / original_page_width} y1={380 * props.current_height / original_page_height} x2={650 * props.current_width / original_page_width} y2={380 * props.current_height / original_page_height} stroke="grey" strokeWidth={3 * props.current_width / original_page_width} />
     </Svg>
   )
 };
@@ -897,7 +898,7 @@ function ImageComponentGeneratedMusic(props) {
 
   return (
     <div className="image_generated_music1" style={image_generated_music1_style}>
-      <img src={`${process.env.PUBLIC_URL}/GEN_SEP_PIANOROLL_FOR_APP/EW/` + props.name} width={675 * props.current_width / original_page_width} height={283 * props.current_height / original_page_height} />
+      <img src={`${process.env.PUBLIC_URL}/GEN_SEP_PIANOROLL_FOR_APP_WITH_BINS/` + props.name} width={675 * props.current_width / original_page_width} height={283 * props.current_height / original_page_height} />
     </div>
   );
 };
@@ -913,7 +914,7 @@ function Audio_Player_Generated(props) {
   return (
     <ReactAudioPlayer
       className="audio_player_generated1"
-      src={`${process.env.PUBLIC_URL}/GEN_SEP_MP3_FOR_APP/EW/` + props.name}
+      src={`${process.env.PUBLIC_URL}/GEN_SEP_MP3_FOR_APP_WITH_BINS/` + props.name}
       controls
       style={audio_player_generated1_style}
     />
@@ -1240,9 +1241,9 @@ class CreateContact extends React.Component {
     metric4_quantized = 11 - metric4_quantized; //Y axis works in the opposite direction with 10 discrete levels, so 10 -
 
     // var gen_pianoroll_filename = "midi_" + metric1_quantized + "_" + metric2_quantized + "_" + metric3_quantized + "_" + metric4_quantized + ".png";
-    var gen_pianoroll_filename = 'EW_684.png'
+    var gen_pianoroll_filename = experiment_tag[0] + experiment_tag[1] + '/' + experiment_tag[0] + experiment_tag[1] + '_' + slider_1_bin + '_' + slider_2_bin + '_' + slider_3_bin + '_' + slider_4_bin + '_' + slider_5_bin + '_' + slider_6_bin + '.png'
     // var gen_mp3_filename = "midi_" + metric1_quantized + "_" + metric2_quantized + "_" + metric3_quantized + "_" + metric4_quantized + ".mp3";
-    var gen_mp3_filename = 'EW_684.mp3'
+    var gen_mp3_filename = experiment_tag[0] + experiment_tag[1] + '/' + experiment_tag[0] + experiment_tag[1] + '_' + slider_1_bin + '_' + slider_2_bin + '_' + slider_3_bin + '_' + slider_4_bin + '_' + slider_5_bin + '_' + slider_6_bin + '.mp3'
 
     var input_pitch_count_histogram_filename = image_input_hist_pitch_count;
     var input_pitch_range_histogram_filename = image_input_hist_pitch_range;
