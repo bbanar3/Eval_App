@@ -26,22 +26,22 @@ var metric2 = (287 - (-0.1383 + 6.1) / (11.5) * 287); // 151;
 var metric3 = (0.1970 + 2.8) / (6) * 287; // 151;
 var metric4 = (287 - (-0.94 + 4.0) / (14) * 287); // 151;
 
-var source_pianoroll_file_name = "EW_1.png";
-var source_mp3_file_name = "EW_684.mp3";
+// var source_pianoroll_file_name = "EW_1.png";
+// var source_mp3_file_name = "EW_684.mp3";
 
-var image_input_hist_pitch_count = "Middle_pitch_count3.png";
-var image_input_hist_pitch_range = "Middle_pitch_range3.png";
-var image_input_hist_avg_duration = "Middle_avg_duration3.png";
-var image_input_hist_avg_velocity = "Middle_avg_velocity.png";
-var image_input_hist_chroma_metric = "Middle_chroma3.png";
-var image_input_hist_chords_metric = "Middle_chords.png";
+var image_input_hist_pitch_count = "Later_pitch_count.png";
+var image_input_hist_pitch_range = "Later_pitch_range3.png";
+var image_input_hist_avg_duration = "Later_avg_duration.png";
+var image_input_hist_avg_velocity = "Later_avg_velocity.png";
+var image_input_hist_chroma_metric = "Later_chroma.png";
+var image_input_hist_chords_metric = "Later_chords.png";
 
-var image_output_hist_pitch_count = "MW2/MW2_PITCH_COUNT/MW2_pitch_count_bin0.png";
-var image_output_hist_pitch_range = "MW2/MW2_PITCH_RANGE/MW2_pitch_range_bin0.png";
-var image_output_hist_avg_duration = "MW2/MW2_AVG_DURATION/MW2_avg_duration_bin0.png";
-var image_output_hist_avg_velocity = "MW2/MW2_AVG_VELOCITY/MW2_avg_velocity_bin0.png";
-var image_output_hist_chroma_metric = "MW2/MW2_CHROMA/MW2_chroma_bin0.png";
-var image_output_hist_chords_metric = "MW2/MW2_CHORDS/MW2_chords_bin0.png";
+var image_output_hist_pitch_count = "LW2/LW2_PITCH_COUNT/LW2_pitch_count_bin11.png";
+var image_output_hist_pitch_range = "LW2/LW2_PITCH_RANGE/LW2_pitch_range_bin8.png";
+var image_output_hist_avg_duration = "LW2/LW2_AVG_DURATION/LW2_avg_duration_bin1.png";
+var image_output_hist_avg_velocity = "LW2/LW2_AVG_VELOCITY/LW2_avg_velocity_bin10.png";
+var image_output_hist_chroma_metric = "LW2/LW2_CHROMA/LW2_chroma_bin7.png";
+var image_output_hist_chords_metric = "LW2/LW2_CHORDS/LW2_chords_bin0.png";
 
 
 var original_page_width = 1920;
@@ -50,11 +50,11 @@ var original_page_height = 906;
 var pad_image_1 = pad1_rc;
 var pad_image_2 = pad2_nd;
 
-var slider_1_bin = 1;
-var slider_2_bin = 1;
-var slider_3_bin = 1;
-var slider_4_bin = 1;
-var slider_5_bin = 1;
+var slider_1_bin = 12;
+var slider_2_bin = 9;
+var slider_3_bin = 2;
+var slider_4_bin = 11;
+var slider_5_bin = 8;
 var slider_6_bin = 1;
 
 var slider_1_num_of_bins = 19;
@@ -64,9 +64,13 @@ var slider_4_num_of_bins = 26;
 var slider_5_num_of_bins = 30;
 var slider_6_num_of_bins = 33;
 
-var experiment_tag = 'MW2';
+var experiment_tag = 'LW2';
 
 var image_offset = 0;
+
+var source_pianoroll_file_name = experiment_tag[0] + experiment_tag[1] + '/' + experiment_tag[0] + experiment_tag[1] + '_' + slider_1_bin + '_' + slider_2_bin + '_' + slider_3_bin + '_' + slider_4_bin + '_' + slider_5_bin + '_' + slider_6_bin + '.png'
+var source_mp3_file_name = experiment_tag[0] + experiment_tag[1] + '/' + experiment_tag[0] + experiment_tag[1] + '_' + slider_1_bin + '_' + slider_2_bin + '_' + slider_3_bin + '_' + slider_4_bin + '_' + slider_5_bin + '_' + slider_6_bin + '.mp3'
+
 
 
 
@@ -1330,8 +1334,8 @@ class CreateContact extends React.Component {
         <TextInputSetStats current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
         <TextGeneratedSetStats current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
 
-        <ToggleSwitch_Pad1 update2DFigures1={this.doTheUpdate.bind(this)} values={['Exag. Classical', 'Base', 'Exag. 20th Century']} selected="Base" current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
-        <ToggleSwitch_Pad2 update2DFigures2={this.doTheUpdate.bind(this)} values={['Base \n Well Trained', 'Base \n Poorly Trained', 'Exag. Classical \n Well Trained', 'Exag. 20th Century \n Well Trained']} selected={"Base \n Well Trained"} current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
+        <ToggleSwitch_Pad1 update2DFigures1={this.doTheUpdate.bind(this)} values={['Exag. Classical', 'Base', 'Exag. 20th Century']} selected="Exag. 20th Century" current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
+        <ToggleSwitch_Pad2 update2DFigures2={this.doTheUpdate.bind(this)} values={['Base \n Well Trained', 'Base \n Poorly Trained', 'Exag. Classical \n Well Trained', 'Exag. 20th Century \n Well Trained']} selected={"Exag. 20th Century \n Well Trained"} current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
         
         <TextExperimentType current_height={this.state.windowHeight} current_width={this.state.windowWidth} />
         <LineExperiments current_height={this.state.windowHeight} current_width={this.state.windowWidth}/>
