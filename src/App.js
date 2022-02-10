@@ -66,6 +66,8 @@ var slider_6_num_of_bins = 33;
 
 var experiment_tag = 'MW2';
 
+var image_offset = 0;
+
 
 
 // ******************************* Figure Toggles *********************************************************************
@@ -891,15 +893,16 @@ function TextOutputChords(props) {
 
 // ************************************** Generated Music Pianoroll and Audio Material ****************************************
 function ImageComponentGeneratedMusic(props) {
-  const image_generated_music1_style = {
-    top: (325 * props.current_height / original_page_height) + 'px',
-    left: (650 * props.current_width / original_page_width) + 'px',
-  }
+  // const image_generated_music1_style = {
+  //   top: (325 * props.current_height / original_page_height) + 'px',
+  //   left: (image_offset + 650 * props.current_width / original_page_width) + 'px',
+  // }
+  const imgElement = React.useRef(null);
 
   return (
-    <div className="image_generated_music1" style={image_generated_music1_style}>
-      <img src={`${process.env.PUBLIC_URL}/GEN_SEP_PIANOROLL_FOR_APP_WITH_BINS/` + props.name} width={675 * props.current_width / original_page_width} height={283 * props.current_height / original_page_height} />
-    </div>
+    // <div className="image_generated_music1" style={image_generated_music1_style}>
+      <img className="image_generated_music1" src={`${process.env.PUBLIC_URL}/GEN_SEP_PIANOROLL_FOR_APP_WITH_BINS/` + props.name} ref={imgElement} onLoad={() =>  image_offset = imgElement.current.naturalWidth} style = {{top: (320 * props.current_height / original_page_height), left: ((650 * props.current_width / original_page_width))}} height={290 * props.current_height / original_page_height} /> 
+    // </div>
   );
 };
 
@@ -907,7 +910,7 @@ function ImageComponentGeneratedMusic(props) {
 function Audio_Player_Generated(props) {
   const audio_player_generated1_style = {
     top: (430 * props.current_height / original_page_height) + 'px',
-    left: (1350 * props.current_width / original_page_width) + 'px',
+    left: (1370 * props.current_width / original_page_width) + 'px',
     width: (450 * props.current_width / original_page_width) + 'px',
     height: (50 * props.current_width / original_page_width) + 'px',
   }
