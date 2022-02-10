@@ -24,6 +24,27 @@
   position: fixed;
 }
 
+.text_pad2trainingcorpus {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+  font-weight: bold;
+}
+
+.text_pad2traininglevel {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+  font-weight: bold;
+}
+
+.text_experiment_type {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+  font-weight: bold;
+}
+
 .text_input_pitch_count {
   position: fixed;
 }
@@ -142,10 +163,20 @@
   left: 400px; */
 }
 
+.text_info {
+  position: fixed;
+  /* top: 800px;
+  left: 400px; */
+}
+
 .text_signature {
   position: fixed;
   /* top: 800px;
   left: 400px; */
+}
+
+.slider1 {
+  position: fixed;
 }
 
 .image_source_music {
@@ -180,4 +211,50 @@
   left: 1500px;
   font: 32px Helvetica, Arial; */
   font-weight: bold;
+}
+
+.text_output_audio {
+  position: fixed;
+  /* top: 200px;
+  left: 1500px;
+  font: 32px Helvetica, Arial; */
+  font-weight: bold;
+}
+
+.colored_line {
+  position: fixed;
+}
+
+.text_varying_training_level {
+  position: fixed;
+  font-weight: bold;
+}
+
+.text_varying_training_corpus {
+  position: fixed;
+  font-weight: bold;
+}
+
+.slider1 {
+  position: fixed;
+}
+
+.slider2 {
+  position: fixed;
+}
+
+.slider3 {
+  position: fixed;
+}
+
+.slider4 {
+  position: fixed;
+}
+
+.slider5 {
+  position: fixed;
+}
+
+.slider6 {
+  position: fixed;
 }
